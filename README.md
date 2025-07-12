@@ -1,172 +1,372 @@
-## 📌  As of mid-2023 , development on TwoTone has been paused.
-
-## You can still run the latest MIDI out beta version at https://twotone-midiout-beta.netlify.app/
-
-# TwoTone
-
-[TwoTone](https://twotone.io/) is an open-source web tool for generating music from data. The app is a [Sonify](https://sonify.io) project built with support from Google News Initiative. It was originally developed by Datavized Technologies with support from [Google News Initiative](https://newsinitiative.withgoogle.com) and key advisor [Alberto Cairo](http://www.thefunctionalart.com/).
-
-
-## How does TwoTone work?
-
-The tool has built-in features to easily create sound from tabular data (e.g. spreadsheets and comma-separated values).
-
-The data uploaded to TwoTone are processed fully in the web browser: no server-side operations or storage is performed. It is also optimized for mobile and designed as a cross-platform Progressive Web App so the tool can be installed on any web connected device.
-
-## Who uses TwoTone?
-
-TwoTone is a playful technology and easy to use, but allows for output to industry-standard formats including live MIDI output enabling  users to apply their compositions for use in professional projects.
-
-The software can be used by journalists, data professionals and researchers as an exploratory tool; or by artists, musicians, media makers and composers as a creative tool. It can also be used to share data with the blind and visually impaired, to help understand data in new ways, totally through the sense of hearing.
-
-## What is TwoTone's goal?
-
-TwoTone explores the potential of turning data into sound, as the primary sense instead of sight, to uncover anomalies and insights through audioscapes rather than a visual chart or graph. In attaching individual time-based data sets and individual columns of data to variables in sound (pitch, volume), the tool can be a useful data communication tool to create a sonic representation of information.
-
-For the user, the experience is "interaction as an instrument." When a selection is made in the dataset it will trigger an audioscape that can be combined with the next interaction to create a realtime composition. Each composition can be recorded and shared easily across web or social channels. The tool therefore allows users to create new and unique pieces of music by exploring a dataset. It is playful but also has practical uses.
-
-## How can your organization benefit from using TwoTone?
-
-TwoTone is designed to be seamlessly integrated into your workflow and used either as a standalone tool for publishing sonification on the web or as a soundtrack builder for multimedia projects. The tool is fully customizable to enable creators to map any data input to the desired audio output.
-
-- Web App:  http://sonify.io/twotone/ (use Google Chrome web browser for best performance)
-- Project official page: https://twotone.io 
-- Documentation: https://github.com/sonifydata/twotone/
- 
-
-## Usage
-
-The easiest way to use TwoTone is by accessing the most updated version on the official app page at [twotone.io](https://twotone.io). However, TwoTone can also run locally on your machine: see the installation instructions below.
-
-First, upload your own data or select one of the sample spreadsheets in the tool. (we've added these to help get you started).
-
-Then, use the following features to customize your data sonification.
-
-1. **Audio Track** - TwoTone will automatically generate an audio track from your data set. You can change your track's data source or instrument.
-
-2. **Play Audio** - Click the Play button to hear the sound generated from your data.
-
-3. **Add Audio Track** - Generate another audio track automatically from your data set or upload an audio track of your own.
-
-4. **Adjust Duration** - Adjust your total duration, row duration, and tempo (BPM) to speed up or slow down your composition.
-
-5. **Advanced Features** - Adjust the volume of your audio track, filter it by data columns or by value, change the key of your musical scale, or adjust octave, scale range and tempo to create an arpeggio.
-
-6. **Export Audio** - Export your project to an audio file in MP3 or Waveform (PCM) format. MP3 Bit Rate export options are 64 kbps, 128 kbps,, 192 kbps, and 320 kbps.
-
-Share your creations with the community [@sonifydata on Twitter](https://twitter.com/sonifydata).
-
-### Creating a Track
-
-A TwoTone composition can have any number of separate tracks, each emitting a different audio representation of one column of data. A new track can be created by hovering or clicking on the "+" button in the lower right corner and selecting a track type. Currently, TwoTone supports two types of tracks:
-
-- **Musical Scale** - Generates a sequence of notes with a pitch corresponding to the data value.
-
-- **Narration Audio** - Plays a recorded or imported audio track, optionally on a loop.
-
-### Editing a Track
-
-All tracks have a few options and operations in common, regardless of their type. Some advanced options are available in the expanded track view, which can be revealed by clicking the expand button at the top right of the track.
-
-#### Re-Order Tracks
-
-Tracks are initially listed in the order they are created. They can be re-sorted by dragging a track's handle on the right side.
-
-#### Delete a Track
-
-A track can be deleted by clicking the trash can icon in the upper right corner of the track frame. There is a confirmation, but track deletion is permanent.
-
-#### Mute a Track
-
-A track can be muted or un-muted by toggling the speaker button in the upper right corner of the track.
-
-#### Volume Adjustment
-
-Every track has a volume slider in the expanded view.
-
-#### Filtering a Track
-
-Any track can be filtered to play or not based on data values. This is a powerful feature that can allow for complex layering of sounds, instruments and rhythms when combined across multiple tracks. See [tutorials](https://twotone.io/tutorials/) for more information and examples.
-
-Filter controls are in the expanded track view. First, select a data column to use as the values to be filtered. Next, use the slider to select a range of values to be played. The values will be displayed in a bar chart to show which sections of the track will be played and which will be silent.
-
-### Advanced Track Controls
-
-Each type of track has different advanced options that can be used to create complex compositions.
-
-#### Narration Audio
-
-This type of track can be used to add narration or background music to a project.
-
-##### Select an Audio File
-
-Click the prompt to select an audio file to be played. Audio files can be imported from device storage or recorded directly from the device's microphone, if one is available.
-
-##### Play Mode
-
-Select an option to determine when and how often the selected audio clip will be played
-
-- **Loop** - The clip will loop on repeat for the duration of the project (assuming the clip is shorter than the project duration). If a filter is applied, the audio will maintain timing with the project's play time, even through silent sections. This is useful for synchronizing music sections without losing the rhythm.
-
-- **Active sections** - When a filter is applied, the clip will play once at the beginning of each non-silent section.
-
-#### Musical Scale
-
-Musical scale tracks create melodies from data and have many options to customize pitch, rhythms and instruments
-
-##### Data Source
-
-Select a column from the source spreadsheet to provide the values that will determine the pitch of each note. Pitches will be spread across a range of octaves, with the lowest value playing the lowest note and the highest value playing the highest note.
-
-##### Select Instrument
-
-A number of built-in musical instruments are provided.
-
-##### Key
-
-Select tonic or root note and the mode of the musical key. All notes in this track will be played in the given key. In most cases, all tracks should be in the same key, though it's not strictly required.
-
-The lowest and highest values will play the tonic note at either end of the given scale.
-
-##### Scale Range
-
-Select how many octaves will comprise the range of notes from lowest to highest. More octaves will result in finer-grained distinction between values. Fewer octaves will allow different tracks to represent different data at opposing ends of the scale, even using the same instrument, like playing left hand and right hand on a piano.
-
-Each instrument will have a different maximum range of octaves depending on how high and low that instrument can play.
-
-##### Start Octave
-
-The entire scale range can be shifted higher or lower within the range of the instrument's available scale. The default *Auto* setting will place the selected scale range in the middle of the instrument's scale.
-
-##### Track Tempo
-
-TwoTone plays one row of data per "beat" as specified in the global project duration setting. For example, a spreadsheet with 100 rows set at 60bpm will play one note for each row every second for 100 seconds, or one minute and 20 seconds (1:20).
-
-The Track Tempo setting is a multiplier of the global tempo that will play more than one note per row for that track, allowing for more complex rhythms.
-
-##### Arpeggio
-
-When multiple notes are played per row, this allows for an [arpeggio](https://en.wikipedia.org/wiki/Arpeggio) of notes. The root of the arpeggio will be the note determined by the value for that row, and all notes will be in the given key.
-
-- **None** - Repeat the same note
-- **Ascending** - Notes will be played in order of increasing pitch
-- **Descending** - Notes will be played in order of increasing pitch
-
-
-This setting is only available when Track Tempo is set to more than 1.
-
-
-## Built With
-- [React](https://reactjs.org/)
-- [Material UI](https://material-ui.com/)
-- [WebMIDI.JS](https://webmidijs.org/)
-
-## Core Team
-TwoTone is a Sonify project built with support from Google News Initiative. The app was originally developed by Datavized Technologies with support from [Google News Initiative](https://newsinitiative.withgoogle.com) and key advisor [Alberto Cairo](http://www.thefunctionalart.com/).
-
-If you want to know more about TwoTone, how it works and future developments, write to us at contact@sonify.io. For any specific request or comment we suggest you use Github or send us an email.
-
-
-## License
-
-This software is licensed under the [MPL 2.0](LICENSE)
+# 🤖 AI Agent Platform
+
+**The most advanced AI agent platform for building, deploying, and managing intelligent AI agents.**
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white)](https://www.docker.com/)
+
+## 🚀 Features
+
+### 🎯 **Core Platform Features**
+- **Multi-Agent System**: Create and manage multiple AI agents with different personalities and capabilities
+- **Real-time Chat**: WebSocket-powered real-time conversations with AI agents
+- **Agent Marketplace**: Discover, share, and monetize AI agents
+- **Visual Agent Builder**: No-code/low-code interface for creating custom agents
+- **Team Collaboration**: Work together with your team to build and deploy agents
+- **Advanced Analytics**: Track performance, usage, and conversation insights
+
+### 🧠 **AI & ML Capabilities**
+- **Multi-LLM Support**: OpenAI GPT-4, Anthropic Claude, Google Gemini, and more
+- **RAG (Retrieval-Augmented Generation)**: Connect agents to your knowledge base
+- **Vector Search**: Semantic search powered by embeddings
+- **Memory Management**: Long-term and short-term memory for context awareness
+- **Tool Integration**: Connect agents to APIs, databases, and external services
+- **Custom Model Support**: Integrate your own fine-tuned models
+
+### 🛠️ **Developer Experience**
+- **Modern Tech Stack**: Next.js 14, FastAPI, PostgreSQL, Redis, Docker
+- **TypeScript**: Full type safety across the entire platform
+- **API-First**: RESTful APIs with OpenAPI documentation
+- **Real-time Updates**: WebSocket support for live agent interactions
+- **Comprehensive Testing**: Unit, integration, and E2E tests
+- **CI/CD Ready**: GitHub Actions workflows for automated deployment
+
+### 🔒 **Enterprise-Ready**
+- **Authentication & Authorization**: JWT-based auth with role-based access control
+- **Data Privacy**: GDPR compliant with data encryption
+- **Scalable Architecture**: Microservices design with horizontal scaling
+- **Monitoring & Observability**: Prometheus, Grafana, and ELK stack integration
+- **High Availability**: Load balancing and failover capabilities
+- **Security**: Rate limiting, input validation, and security headers
+
+## 🏗️ Architecture
+
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Frontend      │    │   Backend       │    │   Database      │
+│   (Next.js)     │◄──►│   (FastAPI)     │◄──►│   (PostgreSQL)  │
+│   - React 18    │    │   - Python 3.11 │    │   - Vector DB   │
+│   - TypeScript  │    │   - LangChain   │    │   - Redis Cache │
+│   - Tailwind    │    │   - WebSocket   │    │   - File Storage│
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                        │                        │
+         └────────────────────────┼────────────────────────┘
+                                  │
+                    ┌─────────────────┐
+                    │   AI Services   │
+                    │   - OpenAI      │
+                    │   - Anthropic   │
+                    │   - Google AI   │
+                    │   - Vector DB   │
+                    └─────────────────┘
+```
+
+## 🚀 Quick Start
+
+### Prerequisites
+- **Node.js** 18+ 
+- **Python** 3.11+
+- **Docker** & **Docker Compose**
+- **PostgreSQL** 15+
+- **Redis** 7+
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/yourusername/ai-agent-platform.git
+cd ai-agent-platform
+```
+
+### 2. Environment Setup
+```bash
+# Copy environment variables
+cp .env.example .env
+
+# Edit .env with your API keys
+nano .env
+```
+
+### 3. Docker Compose (Recommended)
+```bash
+# Start all services
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop all services
+docker-compose down
+```
+
+### 4. Manual Setup (Development)
+
+#### Backend Setup
+```bash
+cd backend
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+#### Frontend Setup
+```bash
+npm install
+npm run dev
+```
+
+### 5. Access the Platform
+- **Frontend**: http://localhost:3000
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
+- **Database Admin**: http://localhost:5050
+- **Monitoring**: http://localhost:3001
+
+## 📋 Environment Variables
+
+### Required Variables
+```env
+# OpenAI Configuration
+OPENAI_API_KEY=your_openai_api_key_here
+OPENAI_ORGANIZATION=your_openai_organization_here
+
+# Database
+DATABASE_URL=postgresql://username:password@localhost:5432/aiagent_platform
+
+# Security
+SECRET_KEY=your_secret_key_here
+NEXTAUTH_SECRET=your_nextauth_secret_here
+```
+
+### Optional Variables
+```env
+# Additional LLM Providers
+ANTHROPIC_API_KEY=your_anthropic_api_key
+GOOGLE_AI_API_KEY=your_google_ai_api_key
+
+# Vector Database
+PINECONE_API_KEY=your_pinecone_api_key
+PINECONE_ENVIRONMENT=your_pinecone_environment
+
+# Email & Storage
+SMTP_HOST=smtp.gmail.com
+AWS_ACCESS_KEY_ID=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+```
+
+## 🎯 Usage Examples
+
+### Creating Your First Agent
+```python
+# Using the Python SDK
+from aiagent import AgentClient
+
+client = AgentClient(api_key="your_api_key")
+
+# Create a new agent
+agent = client.create_agent(
+    name="Marketing Assistant",
+    description="Helps with marketing content and strategy",
+    system_prompt="You are a marketing expert who helps create compelling content.",
+    model="gpt-4",
+    tools=["web_search", "content_generator"]
+)
+
+# Chat with the agent
+response = client.chat(
+    agent_id=agent.id,
+    message="Create a social media post about AI agents"
+)
+```
+
+### Using the REST API
+```bash
+# Create an agent
+curl -X POST "http://localhost:8000/api/v1/agents" \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Customer Support Agent",
+    "description": "Handles customer inquiries",
+    "system_prompt": "You are a helpful customer support representative.",
+    "model": "gpt-4",
+    "tools": ["knowledge_base", "email_integration"]
+  }'
+```
+
+### WebSocket Integration
+```javascript
+// Real-time chat with agents
+const ws = new WebSocket('ws://localhost:8000/ws/chat/agent_id');
+
+ws.onmessage = (event) => {
+  const response = JSON.parse(event.data);
+  console.log('Agent response:', response.message);
+};
+
+ws.send(JSON.stringify({
+  message: "Hello, how can you help me today?",
+  conversation_id: "optional_conversation_id"
+}));
+```
+
+## 🛠️ Development
+
+### Project Structure
+```
+ai-agent-platform/
+├── backend/                 # FastAPI backend
+│   ├── api/                # API routes
+│   ├── core/               # Core functionality
+│   ├── models/             # Database models
+│   ├── services/           # Business logic
+│   └── main.py            # FastAPI app
+├── src/                    # Next.js frontend
+│   ├── app/               # App Router pages
+│   ├── components/        # React components
+│   ├── lib/               # Utility functions
+│   └── types/             # TypeScript types
+├── docker-compose.yml     # Docker services
+├── Dockerfile.frontend    # Frontend Docker image
+├── Dockerfile.backend     # Backend Docker image
+└── README.md             # This file
+```
+
+### Development Commands
+```bash
+# Frontend development
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run lint         # Run ESLint
+npm run test         # Run tests
+
+# Backend development
+uvicorn main:app --reload  # Start development server
+pytest                     # Run tests
+black .                    # Format code
+mypy .                     # Type checking
+
+# Docker commands
+docker-compose up -d       # Start all services
+docker-compose logs -f     # View logs
+docker-compose down        # Stop services
+```
+
+### Testing
+```bash
+# Frontend tests
+npm run test
+npm run test:coverage
+
+# Backend tests
+pytest
+pytest --cov=backend
+```
+
+## 📊 Monitoring & Observability
+
+The platform includes comprehensive monitoring:
+
+- **Prometheus**: Metrics collection (http://localhost:9090)
+- **Grafana**: Visualization dashboards (http://localhost:3001)
+- **ELK Stack**: Logging and search (http://localhost:5601)
+- **Flower**: Celery task monitoring (http://localhost:5555)
+
+## 🚀 Deployment
+
+### Production Deployment
+```bash
+# Using Docker Compose
+docker-compose -f docker-compose.prod.yml up -d
+
+# Using Kubernetes
+kubectl apply -f k8s/
+```
+
+### Cloud Deployment
+- **AWS**: ECS, EKS, or EC2
+- **Google Cloud**: GKE or Cloud Run
+- **Azure**: AKS or Container Instances
+- **Vercel**: Frontend deployment
+- **Railway**: Full-stack deployment
+
+## 🔒 Security
+
+### Security Features
+- JWT-based authentication
+- Rate limiting and DDoS protection
+- Input validation and sanitization
+- HTTPS/SSL encryption
+- Database encryption at rest
+- Secure headers and CORS policies
+
+### Best Practices
+- Regular security audits
+- Dependency vulnerability scanning
+- Secure API key management
+- Data privacy compliance
+- Access logging and monitoring
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Development Setup
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
+
+### Code Style
+- **Frontend**: ESLint + Prettier
+- **Backend**: Black + isort + mypy
+- **Commits**: Conventional commits
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [OpenAI](https://openai.com/) for GPT models
+- [LangChain](https://langchain.com/) for agent framework
+- [FastAPI](https://fastapi.tiangolo.com/) for the backend framework
+- [Next.js](https://nextjs.org/) for the frontend framework
+- [Radix UI](https://www.radix-ui.com/) for UI components
+
+## 📞 Support
+
+- **Documentation**: [docs.aiagent.com](https://docs.aiagent.com)
+- **Discord**: [Join our community](https://discord.gg/aiagent)
+- **GitHub Issues**: [Report bugs or request features](https://github.com/yourusername/ai-agent-platform/issues)
+- **Email**: support@aiagent.com
+
+## 🗺️ Roadmap
+
+### Q1 2024
+- [ ] Multi-agent conversations
+- [ ] Advanced analytics dashboard
+- [ ] Custom model integration
+- [ ] Mobile app
+
+### Q2 2024
+- [ ] Voice agent capabilities
+- [ ] Workflow automation
+- [ ] Enterprise SSO
+- [ ] API rate limiting tiers
+
+### Q3 2024
+- [ ] Agent marketplace
+- [ ] Plugin ecosystem
+- [ ] Advanced security features
+- [ ] Multi-language support
+
+---
+
+**Built with ❤️ by the AI Agent Platform team**
+
+⭐ **Star this repository if you find it useful!**
